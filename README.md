@@ -1,2 +1,2 @@
 # chat-app
-Code for my flash chat application
+Code for my flask chat application.
