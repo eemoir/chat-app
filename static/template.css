@@ -1,0 +1,114 @@
+header {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-end;
+	border-bottom: 5px solid #a2c3f9;
+	padding-top: 40px;
+	margin-bottom: 40px;
+}
+
+html {
+	font-family: 'Noto Serif', serif;
+}
+
+body {
+	margin: 0;
+}
+
+#header-title {
+	text-align: left;
+	font-size: 300%;
+}
+
+#header-info {
+	text-align: right;
+	font-size: 100%;
+}
+
+.info-subtitle {
+	margin: 0;
+}
+
+#form-div {
+	background-color: white;
+	width: 60%;
+	margin: auto;
+	text-align: center;
+	padding-bottom: 15px;
+}
+
+#body-div {
+	border: solid black 2px;
+	border-radius: 5px;
+	width: 50%;
+	margin: auto;
+	padding: 0px 10px 10px 10px;
+}
+
+#channel-body {
+	overflow: hidden;
+}
+
+#channel-form-div {
+	padding-top: 10px;
+}
+
+#message-div {
+	width: 380px;
+	height: 325px;
+	overflow: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+#message-form {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: 1;
+	background-color: white;
+	height: 80px;
+	padding-top: 5px;
+}
+
+#text {
+	margin-left: 5px;
+}
+
+#buttons {
+	margin: 1px 5px 5px 5px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.message {
+	padding: 5px 5px 5px 5px;
+	margin: 5px 5px 5px 5px;
+	width: 50%;
+	background-color: #a2c3f9;
+	border: solid transparent 2px;
+	border-radius: 10px;
+	word-break: break-all;
+	flex-direction: column;
+}
+
+.message-self {
+	align-self: flex-end;
+}
+
+.message-other {
+	align-self: flex-start;
+}
+
+.message-content {
+	margin: 0px;
+}
+
+.timestamp {
+	float: right;
+	font-size: 11px;
+}

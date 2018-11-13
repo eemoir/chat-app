@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}My Message Board{% endblock %}
+
+{% block body %}
+<div id='form-div'>	
+	</div>
+	<p id="user-error" class="error"></p>
+
+<b>Users online:</b>
+	<ul id="users_list">
+		{% if users|length > 0 %}
+			{% for user in users %}
+				<li>{{user}}</li>
+			{% endfor %}	
+		{% else %}
+		<p>Nobody at home</p>
+		{% endif %}
+	</ul>
+
+
+<b>Current channels (click to join):</b>
+<div id="channels-div">
+{% if channels|length > 0 %}
+	{% for channel in channels %}
+	<div>
+		<button class='button channel-button' onclick='window.open("/channel/{{channel}}", "ChatWindow", "width=230,height=420,resizable,scrollbars=yes,status=1")'>{{channel}}</button>
+		<button class="button delete-channel" onclick="deleteChannel('{{channel}}')">X</button>
+	</div>
+	{% endfor %}
+{% else %}
+	<p>No channels currently active</p>
+{% endif %}
+</div>
+<div id='channel-form-div'>
+<b>Create a new channel:</b>
+<form id="channel-form" method="GET" action="#">
+	<input type='text' id='channel-name' name='channel-name' />
+	<p class='error' id="channel-error"></p>
+	<button class='button' id='create-channel' type='submit'>Create</button>
+	</form>
+</div>
+
+{% endblock %}
